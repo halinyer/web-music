@@ -1,17 +1,25 @@
 import styled from 'styled-components'
+import image from '../../images/back.jpg'
 
-
-export const Section = styled.section`
- z-index: 0;
+export const Section = styled.div`
+   z-index: 0;
     height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
     background-size:cover;
     background-position:center center;
-    background-image: url('https://images.squarespace-cdn.com/content/v1/620ac6f49ad4db79c336850a/c931f376-92b5-4fb5-8e7b-75bbc48e5a28/mainsquare.jpg?format=1500w');
-    
-
+    background-image: url(${image});
+  
+    &:before{
+        content:'';
+	position: absolute;
+        top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+        background-color: rgba(0,0,0,0.6);
+    }
 
 `
 
@@ -25,6 +33,13 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 
+
+h2,
+p,
+button,
+div{
+  position: relative;
+}
 
 
 
@@ -53,6 +68,21 @@ font-size: 1.2rem;
     h2{
     font-size: 2.5rem;
 }
+
+
+@media screen and (max-width:500px){
+    h2{
+    font-size: 1.6rem;
+   }
+
+
+   p{
+       font-size: 0.8rem;
+   }
+
+
+
+
 }
 
 

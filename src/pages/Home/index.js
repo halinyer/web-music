@@ -2,13 +2,12 @@ import React from 'react';
 import { Content, Section } from './HomeElement';
 import ElementAimation from '../../components/animation/ElementAnimation';
 import ButtomStart from '../../components/ButtomStart';
-
+import imga from '../../images/back.jpg'
 const Home = () => {
   
   return (
     <>
       <Section>
-        <div className='background-fondo'></div>
         <Content>
           <ElementAimation delay={300}>
             <h2>HAZTE DESTACAR</h2>
